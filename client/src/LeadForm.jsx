@@ -28,7 +28,7 @@ const LeadForm = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/leads', formData);
+      const response = await axios.post("https://lead-generation-system-99se.onrender.com/api/leads", formData);
       setStatus({ message: response.data.message, error: false });
       setFormData({ name: '', email: '', company: '', message: '' });
     } catch (error) {
